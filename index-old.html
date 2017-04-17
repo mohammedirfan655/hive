@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hive</title>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<script>
+function displaySpec(p1,p2,f,fp)
+{
+	var p1 = document.getElementById(p1);
+	var p2 = document.getElementById(p2);
+	var f = document.getElementById(f);
+	var fp = document.getElementById(fp);
+	
+	fp.style.visibility = "hidden";
+	p1.style.transform = "translate(-50px,-100px)";
+	p2.style.transform = "translate(50px,100px)";
+	
+	setTimeout(
+	function(){
+	f.style.zIndex = "10";
+	f.style.transform = "scale(2,2)";
+	},1000);
+	
+}
+function hideSpec(p1,p2,f,fp)
+{
+	var p1 = document.getElementById(p1);
+	var p2 = document.getElementById(p2);
+	var f = document.getElementById(f);
+	var fp = document.getElementById(fp);
+
+
+	f.style.transform = "scale(1,1)";
+	f.style.zIndex = "0";
+	
+	setTimeout(
+	function(){
+	p1.style.transform = "translate(0px,0px)";
+	p2.style.transform = "translate(0px,0px)";	
+	},1000);
+	
+	setTimeout(
+	function(){
+	fp.style.visibility = "visible";
+	},2000);
+}
+
+$(document).ready(function(e) {
+
+/*    
+$('body').click(
+function()
+{
+	hideSpec('p1','p2','f1');
+}
+);
+ */
+
+});
+
+</script>
+<style>
+#f1,#f2,#f3,#f4,#f5,#f6,#f7,#f8,#f9,#f10,#f11,#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10,#p11,#p12,#p13,#p14,#p15,#p16,#p17,#p18,#p19,#p20,#p21,#p22
+{
+    -webkit-transition: 1s; 
+	transition : 1s;		
+}
+
+/*
+#feature
+{
+	position:fixed;
+	top:200px;
+	left:400px;		
+	width: 256px;
+	height: 222px;
+}
+*/
+
+#container
+{
+	background-image:url('mob.png');
+	background-repeat:no-repeat;
+	background-size:100%;
+	width: 98%;
+	height: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#container div
+{
+	display:inline-flex;	
+}
+</style>
+
+<body bgcolor="#D1D3B3">
+
+<div id="container">
+
+<div id="feature1" style="padding: 115px;">
+<img id="f1" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p1','p2','f1','fp1')"/>
+
+<div onClick="displaySpec('p1','p2','f1','fp1')">
+<img id="p1" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p2" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp1" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature2" style="padding: 0px 0px 0px 151px;">
+<img id="f2" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p3','p4','f2','fp2')"/>
+
+<div onClick="displaySpec('p3','p4','f2','fp2')">
+<img id="p3" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p4" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp2" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature3" style="padding: 0px 0px 0px 267px;">
+<img id="f3" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p5','p6','f3','fp3')"/>
+
+<div onClick="displaySpec('p5','p6','f3','fp3')">
+<img id="p5" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p6" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp3" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature4" style="padding: 0px 0px 0px 267px;">
+<img id="f4" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p7','p8','f4','fp4')"/>
+
+<div onClick="displaySpec('p7','p8','f4','fp4')">
+<img id="p7" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p8" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp4" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div style="clear:both"></div>
+<br>
+
+<div id="feature5" style="padding: 0px 0px 0px 250px;">
+<img id="f5" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p9','p10','f5','fp5')"/>
+
+<div onClick="displaySpec('p9','p10','f5','fp5')">
+<img id="p9" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p10" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp5" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature6" style="padding: 0px 0px 0px 267px;">
+<img id="f6" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p11','p12','f6','fp6')"/>
+
+<div onClick="displaySpec('p11','p12','f6','fp6')">
+<img id="p11" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p12" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp6" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature7" style="padding: 0px 0px 0px 267px;">
+<img id="f7" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p13','p14','f7','fp7')"/>
+
+<div onClick="displaySpec('p13','p14','f7','fp7')">
+<img id="p13" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p14" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp7" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div style="clear:both"></div>
+<br>
+
+<div id="feature8" style="padding: 115px;">
+<img id="f8" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p15','p16','f8','fp8')"/>
+
+<div onClick="displaySpec('p15','p16','f8','fp8')">
+<img id="p15" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p16" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp8" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature9" style="padding: 0px 0px 0px 151px;">
+<img id="f9" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p17','p18','f9','fp9')"/>
+
+<div onClick="displaySpec('p17','p18','f9','fp9')">
+<img id="p17" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p18" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp9" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature10" style="padding: 0px 0px 0px 267px;">
+<img id="f10" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p19','p20','f10','fp10')"/>
+
+<div onClick="displaySpec('p19','p20','f10','fp10')">
+<img id="p19" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p20" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp10" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+<div id="feature11" style="padding: 0px 0px 0px 267px;">
+<img id="f11" src="h2.png" style="position:absolute;width:15%;" onClick="hideSpec('p21','p22','f11','fp11')"/>
+
+<div onClick="displaySpec('p21','p22','f11','fp11')">
+<img id="p21" src="p1.png" style="position:absolute;width:15%;"/>
+<img id="p22" src="p2.png" style="position:absolute;width:15%;"/>
+<img id="fp11" src="h1.png" style="position:absolute;width:15%;"/>
+</div>
+</div>
+
+
+</div><!-- Container -->
+</body>
+</html>
